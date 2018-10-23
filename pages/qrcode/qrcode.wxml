@@ -1,0 +1,11 @@
+<!--pages/qrcode/qrcode.wxml-->
+<view class="bg_view">
+      <view class="text_view">请联系服务员扫码领取饮品</view>
+
+      <view class="image_view">
+      <image src="{{imgurl}}"></image>
+      </view>
+
+
+
+</view>

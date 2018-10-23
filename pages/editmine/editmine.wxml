@@ -1,0 +1,33 @@
+<view class="title">必填信息</view>
+<form bindsubmit="formSubmit">
+<view class="homepage">
+  <scroll-view scroll-y="True">
+    <view class='homepage_name'>名：<input name="fname" placeholder='First Name'></input></view>
+    <view class='homepage_name'>姓：<input name="sname" placeholder='Family Name'></input></view>
+    <view class='homepage_country'>国籍：<picker class="picker" bindchange="bindPickerChange" value="{{country_group[index]}}" name="country" range="{{country_group}}">
+    <view class="picker">
+     {{country_group[index]}}
+    </view>
+    </picker></view>
+    <view class='homepage_sex' >性别：
+      <view class="sex_check">
+      <radio-group name="sex">
+      <radio class='sex_check_checked'  wx:for="{{sex}}" value="{{item.value}}">{{item.name}}</radio>
+      </radio-group>
+      </view>
+    </view>
+    <view class='homepage_country'>目前在哪所城市居住:<picker class="picker1" bindchange="bindPickerChange1" value="{{city_group[index1]}}" name="city" range="{{city_group}}">
+    <view class="picker">
+     {{city_group[index1]}}
+    </view>
+    </picker></view>
+    <view class='homepage_age'>是否年满18岁?<switch bindchange="switchChange" name="has18"/></view>
+    <view class='homepage_phone'>联系电话：<input name="mobile" type="number" placeholder='Phone Number'></input></view>
+    <view class='homepage_email'>电子邮件：<input name="email" placeholder='email'></input></view>
+    <view class='homepage_email'>专业领域：<input name="specialties" placeholder="Specialties" ></input></view>
+  </scroll-view>
+</view> 
+<view class='save_bottom'>
+  <button class="save_button" formType="submit">保存</button>
+</view>
+</form>

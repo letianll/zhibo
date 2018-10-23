@@ -1,0 +1,101 @@
+<!--pages/play/play.wxml-->
+<view style="width:100%;height: 100%;"> 
+    
+  <view class="liveplay">  
+    <live-player
+      style="width:100%;height:100%;"
+      id="video-livePlayer"
+      mode="live"
+      orientation="{{orientation}}" 
+      muted="{{muted}}" 
+      background-mute="{{backgroundMute}}"
+      object-fit="{{objectFit}}"
+      min-cache="1"
+      max-cache="3"
+      src="{{playUrl}}" 
+      debug="{{debug}}"
+      bindstatechange="onPlayEvent"
+      bindfullscreenchange="onFullScreenChange"> 
+     </live-player>  
+   </view>
+   <view class="play_ct" >
+     
+      <cover-view class='bottom_box'>       
+        <cover-image class="bottom_button" src="../Resources/{{playing?'suspend':'start'}}.png" bindtap='onPlayClick'></cover-image>
+        
+      </cover-view>
+      <cover-view class='bottom_box'>       
+        <cover-image class="bottom_button" src="../Resources/{{muted?'sound-dis':'sound'}}.png" bindtap='onMuteClick'></cover-image>
+        
+      </cover-view>
+      <!--<cover-view class='bottom_box'>       
+        <cover-image class="bottom_button" src="../Resources/{{objectFit == 'contain'?'adjust':'fill'}}.png" bindtap='onObjectfitClick'></cover-image>
+        
+      </cover-view>-->
+      </view>
+ <view class="c-minheight wx-scroll-view_KcCJAi" data-c_e_id="wx_scroll_view_cf9d6671">
+  <view class="swiper-tab"> 
+   <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">■ 现场</view> 
+   <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">■ 互动</view> 
+  </view> 
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange"> 
+  <swiper-item> 
+  <scroll-view scroll-y style="height: 100%;overflow:hidden;">
+  <block wx:for="{{zimudata}}">  
+   <view class="hudong" wx:if="{{item.types==0}}">
+   <view class="hudong_img">
+   <image src="{{item.head_img}}"></image>
+   <view class="hudong_text">{{item.uname}}</view>
+   </view>
+   <view class="hudong_txt">
+   
+   <view class="zhibo_en">{{item.en_txt}}</view>
+   <view class="zhibo_zh">{{item.zh_txt}}</view>
+   </view> 
+   </view>
+   
+
+
+   <view class="hudong" wx:if="{{item.types==1}}">
+   
+   <view class="hudong_txt">
+   
+   <view class="hudong_zh">{{item.zh_txt}}</view>
+   <view class="hudong_en">{{item.en_txt}}</view>
+   </view> 
+   <view class="hudong_img">
+   <image src="{{item.head_img}}"></image>
+   <view class="hudong_text">{{item.uname}}</view>
+   </view>
+   </view>
+   </block>
+  </scroll-view>
+  </swiper-item> 
+  <swiper-item>
+  <scroll-view scroll-y style="height:100%;overflow:hidden;">
+   <block wx:for="{{msgdata}}">  
+   <view class="hudong">
+   <view class="hudong_img">
+   <image src="{{item.u_img}}"></image>
+   <view class="hudong_text">{{item.u_name}}</view>
+   </view>
+   <view class="hudong_txt">
+   
+   <view class="hudong_zh">{{item.zh_txt}}</view>
+   <view class="hudong_en">{{item.en_txt}}</view>
+   </view> 
+   </view>
+   </block>
+   </scroll-view>
+  
+  </swiper-item> 
+</swiper> 
+</view>
+</view>  
+ <view class="keybord" wx:if="{{currentTab==1}}">
+   <image class="key_bt" src="../Resources/{{texton?'voice':'keybord'}}.png" bindtap='onkeybordClick'></image>
+   <input class="textinput" name="userText" wx:if="{{texton}}" placeholder="请输入文本"
+    bindchange="userTextInput" value='{{user_msg}}'/>
+    <button class="voice_bt" wx:if="{{!texton}}" catchtouchstart="OnVoice" catchtouchend="OffVoice">{{voicetext}}</button>
+   </view>

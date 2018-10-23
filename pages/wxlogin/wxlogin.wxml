@@ -1,0 +1,10 @@
+<!--pages/wxlogin/wxlogin.wxml-->
+<!--index.wxml-->
+<view class="container">
+  
+ 
+</view>
+
+<view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="index_bt"> 进入首页 </button> 
+  </view>

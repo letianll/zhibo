@@ -1,0 +1,24 @@
+<!--pages/search/search.wxml-->
+<view class="container" style="height:1200rpx;">
+<scroll-view scroll-y="true" class="sr_view" style="height: 100%;" bindscrolltolower="loadMoreall">
+      <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="45"/><text>刷新中...</text></view>
+      <view wx:else  style="display:none" ><text></text></view>
+      <block wx:for="{{index_info}}" wx:key="{{index}}"> 
+          <view class="active_view" catchtap='tiaozhuan' id='{{item.id}}' >
+              <view class="active_img" style='background-image:url({{item.img}});'>
+                 <button >{{item.status_name}}</button>
+                 
+              </view>
+              <view class="title_view">{{item.name}}</view>
+              <view class="desc_view">{{item.detail}}</view> 
+              <view class="other_view">
+              <view class="type_view">{{item.g_name}}</view>
+              <view class="price_view">
+              线下参加价格:<text>{{item.offline_price}}</text>元，线上参加价格<text>{{item.online_price}}</text>元
+              </view>
+              </view>
+          </view>
+    </block>         
+ </scroll-view>
+ </view>

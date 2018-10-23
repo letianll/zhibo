@@ -1,0 +1,12 @@
+<view class="c-minheight wx-view_zdFWIk" data-c_e_id="wx_view_f53fba74">
+    <icon class="wx-icon_nVIrt7" data-c_e_id="wx_icon_4f80f3f2" size="23" type="success"/>
+    <text class="c-block wx-text_Al3qPn" data-c_e_id="wx_text_8ee9a2fd">拼团成功！</text>
+    <text class="c-block wx-text_fHkx21" data-c_e_id="wx_text_074095e5">（返回首页，进入我的→我的拼团查看订单信息）</text>
+</view>
+<view class="c-minheight wx-view_9Y5Yad" data-c_e_id="wx_view_8c87b46c">
+    <image class="wx-image_qkePie" data-c_e_id="wx_image_9e15502a" mode="scaleToFill" src="http://qty83k.creatby.com/materials/119031/origin/7be469a9e7366eb8df8a677150587d1b_origin.png" style="background-size:  100% 100%; background-position:  0% 0%; background-repeat:  no-repeat; background-image: url(http://qty83k.creatby.com/materials/119031/origin/7be469a9e7366eb8df8a677150587d1b_origin.png); "/>
+    <text class="c-block wx-text_M9Ekno" data-c_e_id="wx_text_76a771a8">分享该内容，生成你的专属邀请！</text>
+</view>
+<button class="wx-button_tI8L7H" data-c_e_id="wx_button_ac5334ba" hover-class="button-hover" size="default" type="default">
+    返回首页
+</button>

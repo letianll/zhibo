@@ -1,0 +1,32 @@
+/* pages/apply/apply.wxss */
+.bg_view{
+  width:100%; height: 100%; padding-top: 10rpx; font-size: 25rpx;margin-top: 20rpx;
+}
+.txt_view{
+  width:95%; display: flex; height: 50rpx; padding: 10px; border-bottom: 1px dashed #aaaaaa; line-height: 50rpx;
+}
+.txt_view1{ 
+  width:95%; display: flex; height: 50rpx; padding: 10px;
+}
+.textinput{
+  width:100%; height: 30px; font-size: 25rpx; border:#aaaaaa 1px solid;
+}
+.picker{
+  font-size: 25rpx; 
+}
+.textarea{
+   width:100%; height: 100px; font-size: 25rpx; border:#aaaaaa 1px solid;
+}
+.txt_bt{
+  width:80%; height: 50px; font-size: 25rpx; background-color: #ff9933;color:#fff; line-height: 50px;
+}
+.txt_view text{
+  color: #ff9933;
+}
+.shuoming{
+  width:90%; margin-left: 5%; font-size: 25rpx; color: #aaaaaa; height: auto; margin-top: 20%;
+  
+}
+.shuoming text{
+line-height: 25rpx;
+}

@@ -1,0 +1,63 @@
+{
+  "pages": [
+    
+    "pages/wxlogin/wxlogin",
+    "pages/index/index",
+    "pages/video/video",
+    "pages/index_detail/index_detail",
+    "pages/mine/mine",
+    "pages/pay/pay",
+    "pages/payready/payready",
+    "pages/detail/detail",
+    "pages/list/list",
+    "pages/successful2/successful2",
+    "pages/successful1/successful1",
+    "pages/activity/activity",
+    "pages/logs/logs",
+    "pages/apply/apply",
+    "pages/ex_activity/ex_activity",
+    "pages/pay_list/pay_list",
+    "pages/qrcode/qrcode",
+    "pages/search/search",
+    "pages/editmine/editmine",
+    "pages/speaker/speaker",
+    "pages/recharge/recharge",
+    "pages/help/help", 
+    "pages/webother/webother",
+    "pages/moneyout/moneyout",
+    "pages/out_list/out_list",
+    "pages/anchor_detail/anchor_detail",
+    "pages/my_fav/my_fav"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "8 Billion Coffee",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/video1.png",
+        "iconPath": "images/video.png",
+        "pagePath": "pages/index/index",
+        "text": "活动"
+      }, 
+      { 
+        "selectedIconPath": "images/offline1.png",
+        "iconPath": "images/offline.png",
+        "pagePath": "pages/speaker/speaker",
+        "text": "朋友们"
+      },
+      {
+        "selectedIconPath": "images/mine1.png",
+        "iconPath": "images/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+page{
+  height:100%;background-color: #eeeeee;
+}
+.container1{
+  height: 100%;
+  
+  padding:0;
+  font-family:"Microsoft YaHei";
+  
+}
+.userinfo_view{
+   width:100%; height:200rpx; background-color:#eeeeee;padding-bottom:100rpx; overflow:hidden;
+   
+}
+.detail_view{
+  width:100%;height:180rpx;border-radius: 5rpx;display: flex;align-items: center;justify-content: center;
+}
+.head_img{
+  width:160rpx; height: 160rpx; border-radius: 50%; display: flex;
+}
+.name_view{
+   font-size: 30rpx; color: #666666;width: 100%; text-align: center; margin-top: 20rpx;
+}
+.edit_view{
+  font-size: 25rpx; color: #666666; float: right; margin-right: 20rpx; margin-top: -50rpx;
+}
+.row1{
+  width:100%; height: 60rpx;
+}
+.row2{
+  width:100%; height: 90rpx; 
+}
+.colum1{
+  width:50%; margin-left: 20rpx; margin-top: 20rpx; float: left;
+}
+.title{
+  font-size: 25rpx; color: #bbbbbb;
+}
+.desc{
+  font-size: 25rpx; color: #000000;margin-left: 40rpx;
+}
+.colum2{
+  width:30%; margin-right: 20rpx; margin-top: 0rpx; float: right;
+}
+.colum2 image{
+  width:100rpx; height: 80rpx; margin-top: 0rpx; margin-left: 50rpx;
+}
+.num_view{
+  width:95%; text-align: center; align-items: center;
+  height: 120rpx; padding-top: 20rpx; border: 1px solid #aaaaaa; border-radius: 15rpx; margin: 2.5%;
+  background-color: #fff;
+}
+.num_child{
+  width:33%; display: inline-block;
+}
+.number1{
+  font-size: 40rpx;
+}
+.txt1{
+  font-size: 25rpx;
+}
+.number2{
+  font-size: 40rpx; color: #ff9933
+}
+.txt2{
+  font-size: 25rpx;color: #ff9933
+}
+.number3{
+  font-size: 40rpx;color: rgb(101,76,146);
+}
+.txt3{
+  font-size: 25rpx;color: rgb(101,76,146);
+}
+
+
+.other_view{
+  width:100%; height:auto;  padding-top:20rpx; overflow:hidden;
+}
+
+.share_view{
+  width:95%; height: 110rpx; padding-top: 20rpx;
+  margin-bottom: 60rpx; text-align: center; margin-left:2.5%;border-radius: 15rpx;
+  background-color: #ff9933; line-height: 80rpx;
+  color: #fff; font-size: 50rpx; font-weight: bold;
+}
+.share_view image{
+  width:80rpx; height: 80rpx; position: absolute; left:80rpx;
+}
+.bt_list{
+  width:95%; margin-bottom:20rpx; background-color: #fff; height: 70rpx; padding-top: 10rpx; padding-bottom: 10rpx; line-height: 70rpx;overflow:hidden; margin-left: 2.5%; border:1px solid #aaaaaa;
+  border-radius: 15rpx;
+}
+.bt_list1{
+   width:95.5%;
+   height: 95rpx;
+   background-color: #fff;
+   overflow:hidden; margin-left: 2.5%; border:1px solid #aaaaaa;
+  border-radius: 15rpx; text-align: left; display: flex;
+  align-items: center;justify-content: center;
+  padding: 0px;
+  padding-left: -10rpx;
+}
+.bt_list_icon{
+  width:50rpx; height: 50rpx;float: left; margin-left: 30rpx; margin-top:10rpx;
+}
+.bt_list_tr{
+  float: left; font-size: 30rpx; color: #666666; width: 85%; margin-left: 10rpx;
+}
+.jiantou{
+  float: right;
+}
+.bt_list_icon1{
+  width:50rpx; height: 50rpx;float: left; margin-left: 10rpx; margin-top:10rpx;
+}
+.bt_list_tr1{
+  float: left; font-size: 30rpx; color: #666666; width: 85%; margin-left: 10rpx;
+}
+.jiantou1{
+  float: right;
+}

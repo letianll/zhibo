@@ -1,0 +1,168 @@
+
+page{
+  background-color: #eeeeee;  height: 100%;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60rpx;
+  font-size: 25rpx;
+  font-family: "Microsoft Yahei";
+  color: #6c6c6c;
+  margin-left: 40rpx;
+  text-align: center;
+}
+.homepage{
+  display: flex;
+  flex-direction: column;
+  height:auto;
+  width: 100%;
+  background-color: #ffffff;
+  padding-bottom: 30rpx;
+}
+.homepage input{
+  width:70%; float:right;
+}
+.homepage_name{
+  width:95%;
+  margin-left:2.5%; 
+  height: 60rpx;
+  border: 1px solid #bebebe;
+  border-radius: 15rpx;
+  margin-top: 30rpx;
+  color: #666666;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Microsoft Yahei";
+  font-size: 30rpx;
+  font-weight:500;
+  
+
+}
+
+.homepage_country{
+ width:95%;
+  margin-left:2.5%; 
+  height: 60rpx;
+  border: 1px solid #bebebe;
+  border-radius: 15rpx;
+  margin-top: 30rpx;
+  color: #666666;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Microsoft Yahei";
+  font-size: 30rpx;
+  font-weight:500;
+}
+
+.homepage_sex{
+  width:95%;
+  margin-left:2.5%; 
+  height: 60rpx;
+  border: 1px solid #bebebe;
+  border-radius: 15rpx;
+  margin-top: 30rpx;
+  color: #666666;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Microsoft Yahei";
+  font-size: 30rpx;
+  font-weight:500;
+}
+.sex_check{
+  margin-right:60rpx;
+}
+.sex_check_checked{
+  margin-right: 10rpx;
+}
+.homepage_age{
+  width:95%;
+  margin-left:2.5%; 
+  height: 60rpx;
+  border: 1px solid #bebebe;
+  border-radius: 15rpx;
+  margin-top: 30rpx;
+  color: #666666;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Microsoft Yahei";
+  font-size: 30rpx;
+  font-weight:500;
+}
+.homepage_age>switch{
+  margin-right: 60rpx;
+}
+.homepage_phone{
+  width:95%;
+  margin-left:2.5%; 
+  height: 60rpx;
+  border: 1px solid #bebebe;
+  border-radius: 15rpx;
+  margin-top: 30rpx;
+  color: #666666;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Microsoft Yahei";
+  font-size: 30rpx;
+  font-weight:500;
+}
+.homepage_phone>input{
+
+  margin-left: 10rpx;
+}
+.homepage_email{
+  width:95%;
+  margin-left:2.5%; 
+  height: 60rpx;
+  border: 1px solid #bebebe;
+  border-radius: 15rpx;
+  margin-top: 30rpx;
+  color: #666666;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Microsoft Yahei";
+  font-size: 30rpx;
+  font-weight:500;
+}
+.homepage_email>input{
+  margin-left: 10rpx;
+}
+.save_bottom{
+  margin-top:50rpx;
+  height: 200rpx;
+  width:90%;
+  margin-left:5%;
+  
+}
+.save_bottom radio{
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+}
+.save_button{
+  margin-top: 30rpx;
+  width: 600rpx;
+  background-color: #ff9933;
+  color: #ffffff;
+}
+.picker{
+  width:200rpx; margin-left: 200rpx; text-align: center;
+}
+.picker1{
+  width:200rpx; margin-left: 20rpx;text-align: center;
+
+}
+.picker2{
+  width:200rpx; margin-left: 230rpx; text-align: center;
+}

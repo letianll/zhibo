@@ -1,0 +1,30 @@
+<view class='bg_view'>
+
+   <view class="txt_view">
+   <text >活动名称：</text>{{detail_data.name}} 
+   </view>
+   <view class="txt_view">
+   <text >活动时间：</text>{{detail_data.start_time}} 
+   </view>
+   <view class="txt_view">
+   <text >活动地点：</text>{{types==0? detail_data.shop_name: "线上观看直播"}}
+   </view>
+   <view class="txt_view">
+   <text >参团价格：</text>{{price}}元
+   </view> 
+  <view class="txt_view">
+   <text >当前余额：</text>{{money}}元
+   </view> 
+   <view class="txt_view1">
+   <button class='txt_bt' bindtap="buy_it" wx:if="{{money>=price}}" >立即支付</button>
+   <button class='txt_bt' bindtap="go_pay" wx:else>立即充值</button>
+   </view> 
+
+
+   <view class="shuoming">
+    <text>·您所购买的分享活动在正式开始前12小时若未成团，活动即宣布取消，系统将返回您全部的付款金额至小程序账户。\r\n
+·除活动取消外，其余原因发起的退款需求均不支持，请购买前仔细斟酌确认。\r\n
+·购买成功后，请在“我的”，“参加活动”区内查看活动详情。\r\n
+</text>
+    </view>   
+</view>

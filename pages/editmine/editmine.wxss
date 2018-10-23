@@ -1,0 +1,142 @@
+
+page{
+  background-color: #eeeeee; 
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  font-size: 13px;
+  font-family: "Microsoft Yahei";
+  color: #6c6c6c;
+  margin-left: 15px;
+}
+.homepage{
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+  width: 97%;
+  background-color: #ffffff;
+  padding-left: 3%;
+}
+.homepage_name{
+  height: 45px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bebebe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Microsoft Yahei";
+  font-size: 16px;
+  font-weight:500;
+}
+.homepage_name>input{
+  
+  margin-left: 30px;
+}
+.homepage_country{
+  height: 45px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bebebe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Microsoft Yahei";
+  font-size: 16px;
+  font-weight:500;
+}
+.homepage_country>input{
+  margin-left: 10px;
+  width: 200px;
+}
+.homepage_sex{
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bebebe;
+  justify-content: space-between;
+  font-family: "Microsoft Yahei";
+  font-size: 16px;
+  font-weight:500;
+}
+.sex_check{
+  margin-right:30px;
+}
+.sex_check_checked{
+  margin-right: 5px;
+}
+.homepage_age{
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bebebe;
+  justify-content: space-between;
+  font-family: "Microsoft Yahei";
+  font-size: 16px;
+  font-weight:500;
+}
+.homepage_age>switch{
+  margin-right: 30px;
+}
+.homepage_phone{
+  height: 45px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bebebe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Microsoft Yahei";
+  font-size: 16px;
+  font-weight:500;
+}
+.homepage_phone>input{
+
+  margin-left: 5px;
+}
+.homepage_email{
+  height: 45px;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bebebe;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Microsoft Yahei";
+  font-size: 16px;
+  font-weight:500;
+}
+.homepage_email>input{
+  margin-left: 5px;
+}
+.save_bottom{
+  height: 100px;
+}
+.save_bottom>radio{
+  margin-left: 10px; 
+  height: 30px;
+  font-size: 13px;
+}
+.save_button{
+  margin-top: 15px;
+  width: 300px;
+  background-color: #ff9933;
+  color: #ffffff;
+}
+.picker{
+  width:200rpx; margin-left: 200rpx; text-align: center;
+}
+.picker1{
+  width:200rpx; margin-left: 20rpx;text-align: center;
+
+}

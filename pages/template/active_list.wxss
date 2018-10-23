@@ -1,0 +1,41 @@
+.active_view{
+   width:90%; height: 480rpx;  margin-left: 5%;
+   margin-top: 5%; margin-bottom: 10%; padding-top: 30rpx;
+   border-bottom: 1px solid rgb(255,235,206);
+}
+.active_img{
+width:100%;height:350rpx; 
+border: 1px solid #aaaaaa;
+border-radius: 10px;
+background-repeat:round;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.active_img button{
+   background-color:#ff9933; font-size: 20rpx; color: #fff; border-radius: 8px;
+   position:relative; left:-40%;  top:-20rpx; height: 50rpx; line-height: 50rpx; width:150rpx;
+}  
+.cafe_view{
+  position:relative;left:90%; color: #fff; font-size:14px; width:50rpx; height: 30rpx; background-color: #ff9933;
+  line-height: 30rpx; border-radius: 20rpx; padding: 10rpx; opacity: 0.7;
+}
+.title_view{
+   font-size:30rpx;margin-top: 10rpx;
+}
+.desc_view{
+   font-size: 25rpx; color: #aaaaaa;margin-top: 10rpx;
+}
+.other_view{
+  width:100%; height:50rpx; margin-top: 10rpx;
+} 
+.type_view{
+ font-size: 12px; border: 1px solid #ff9933; color:#ff9933; width: 150rpx;
+  text-align: center;float: left;
+}
+.price_view{
+  font-size: 12px; float: right; color: #888888; 
+}
+.price_view text{
+  color: #ff9933;
+}

@@ -1,0 +1,68 @@
+<view class="title_image">
+  <image src="{{detail_data.img}}" mode="aspectFit"></image>
+</view>
+<view class='home_page_text'>
+        <text class='home_page_text1'>{{detail_data.name}}</text>
+        <text class='home_page_text2'>{{detail_data.detail}}</text>
+
+        <view class='home_page_text3'>
+          <view class='home_page_follow' bindtap="shoucang">
+            <image src="/images/{{is_sc==0?'shoucang1':'shoucang2'}}.png" ></image>
+            <text>收藏活动 \n</text>
+            <text style='color:#666666;font-size:25rpx'>已有{{sc_num}}人收藏</text>
+          </view>
+          <view class='home_page_view' bindtap="guanzhu">
+            <image src="/images/{{is_gz==0?'sc':'sc1'}}.png"  ></image>
+            <text>关注主播 \n</text>
+            <text style='color:#666666;font-size:25rpx'>已有{{gz_num}}人关注</text>
+          </view>
+        </view>
+        
+      </view>
+      <view class="text_abstract">
+         
+          <import src="../../wxParse/wxParse.wxml"/>
+
+          <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        
+      </view>
+    <view class="text_abstract1">
+          <view class="detail_list1">
+           <view class="list1"><image src="/images/riqi.png"></image>分享时间</view>
+           <view class="list2">{{detail_data.start_time}}</view>
+          
+          </view>
+          <view class="detail_list1" bindtap='open_map'>
+           <view class="list1"><image src="/images/addr1.png"></image>分享地点</view>
+           <view class="list2">{{detail_data.shop_name}}<image src="/images/jiantou.png"></image>
+           </view>
+          </view>
+          <view class="detail_list1">
+           <view class="list1"><image src="/images/xianxia.png"></image>线下分享</view>
+           <view class="list2">已有{{detail_data.offline_num}}人加入，待{{detail_data.totleneed_online_member-detail_data.offline_num}}人拼满</view>
+           
+          </view> 
+          <view class="detail_list1">
+           <view class="list1"><image src="/images/xianshang.png"></image>线上直播</view>
+           <view class="list2">已有{{detail_data.online_num}}人申请观看</view>
+           
+          </view>
+    </view>
+<view style="height:100rpx; width:100%">
+
+
+</view>
+<view class="apply_activity">
+      
+        <view class='icon_button'>
+          <button wx:if="{{detail_data.status==1&&is_buy!=0}}" catchtap="tiaozhuan_xianxia">线下报名{{detail_data.offline_price}}元</button>
+          <button wx:if="{{detail_data.status==1&&is_buy==0}}" >线下报名成功</button>
+          <button wx:if="{{detail_data.status<4&&is_buy==-1}}" catchtap="tiaozhuan_xianshang">线上观看{{detail_data.online_price}}元</button>
+          <button wx:if="{{detail_data.status>1&&detail_data.status<4&&is_buy==0}}" catchtap="tiaozhuan_drink">领取饮料</button>
+          <button wx:if="{{detail_data.status>1&&detail_data.status<4&&is_buy==0}}" catchtap="scan_qr">扫码参加</button>
+          <button wx:if="{{detail_data.status<4&&is_buy==1}}" catchtap="tiaozhuan_video">观看直播</button>
+          <button wx:if="{{detail_data.status>=4&&detail_data.status<=5}}" style='width:100%' >回看录像</button>
+        </view>
+     
+      
+    </view>

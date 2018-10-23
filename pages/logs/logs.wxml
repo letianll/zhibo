@@ -1,0 +1,83 @@
+<view class="container" >
+  <view class="swiper-tab"> 
+   <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view> 
+   <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">收藏</view> 
+   <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">关注</view>  
+  </view>  
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:600px;" bindchange="bindChange"> 
+  <swiper-item> 
+  <scroll-view scroll-y="true" class="sr_view" style="height: 100%;" bindscrolltolower="loadMoreall">
+      <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="45"/><text>刷新中...</text></view>
+      <view wx:else  style="display:none" ><text></text></view>
+      <block wx:for="{{index_info}}" wx:key="{{index}}"> 
+          <view class="active_view" catchtap='tiaozhuan' id='{{item.id}}' >
+              <view class="active_img" style='background-image:url({{item.img}});'>
+                 <button >{{item.status_name}}</button>
+                 <view class="cafe_view">cafe</view>
+              </view>
+              <view class="title_view">{{item.name}}</view>
+              <view class="desc_view">{{item.detail}}</view> 
+              <view class="other_view">
+              <view class="type_view">{{item.g_name}}</view>
+              <view class="price_view">
+              线下参加价格:<text>{{item.offline_price}}</text>元，线上参加价格<text>{{item.online_price}}</text>元
+              </view>
+              </view>
+          </view>
+    </block>         
+ </scroll-view>
+  </swiper-item> 
+  <swiper-item> 
+   <scroll-view scroll-y="true" class="sr_view" style="height: 100%;" bindscrolltolower="loadMorefav">
+      <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="45"/><text>刷新中...</text></view>
+      <view wx:else  style="display:none" ><text></text></view>
+      <block wx:for="{{hot_info}}" wx:key="{{index}}"> 
+          <view class="active_view" catchtap='tiaozhuan' id='{{item.id}}' >
+              <view class="active_img" style='background-image:url({{item.img}});'>
+                 <button >{{item.status_name}}</button>
+                 <view class="cafe_view">cafe</view>
+              </view>  
+              <view class="title_view">{{item.name}}</view>
+              <view class="desc_view">{{item.detail}}</view> 
+              <view class="other_view">
+              <view class="type_view">{{item.g_name}}</view>
+              <view class="price_view">
+              线下参加价格:<text>{{item.offline_price}}</text>元，线上参加价格<text>{{item.online_price}}</text>元
+              </view>
+              </view>
+          </view>
+    </block>         
+ </scroll-view>
+  </swiper-item> 
+  <swiper-item> 
+  <scroll-view scroll-y="true" class="sr_view" style="height: 100%;" bindscrolltolower="loadMoreaochor">
+      <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="45"/><text>刷新中...</text></view>
+      <view wx:else  style="display:none" ><text></text></view>
+      <block wx:for="{{care_info}}" wx:key="{{index}}"> 
+  <view class="anchor_view" catchtap='go_anchor' id='{{item.id}}'>
+  <view class="head_img" style="background-image:url({{item.headimg}});"></view>
+  <view class="anchor_txt">
+  <view style='float:right'>
+  
+  <image src="/images/huatong.png"></image>
+  <text style="color:#ff9933;font-size:14px;">{{item.active_count}}</text>
+  <image src="/images/sc.png"></image>
+  <text style="color:#ff9933;font-size:14px;">{{item.care_count}}</text>
+  <image src="/images/liulan.png"></image>
+  <text style="color:#ff9933;font-size:14px;">{{item.sc_count}}</text>
+  </view> 
+ <text>{{item.fname}}  {{item.sname}}\n</text>
+  
+  <text>简介：{{item.specialties}}</text>
+  
+  </view>
+  </view>
+   </block>         
+ </scroll-view>
+  </swiper-item>
+</swiper> 
+</view>

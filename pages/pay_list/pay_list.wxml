@@ -1,0 +1,26 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">类型</view>
+    <view class="th">金额</view>
+    <view class="th1">时间</view>
+    <view class="th2 ">说明</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.pay_type}}</view>
+      <view class="td">{{item.money}}</view>
+      <view class="td1">{{item.create_time}}</view>  
+      <view class="td2" style="text-align:left">
+      {{item.descs}}
+      </view> 
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.pay_type}}</view>
+      <view class="td">{{item.money}}</view>
+      <view class="td1">{{item.create_time}}</view>  
+      <view class="td2" style="text-align:left">
+      {{item.descs}}
+      </view> 
+    </view>
+  </block>
+</view>

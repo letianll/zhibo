@@ -1,0 +1,31 @@
+<view class="c-minheight wx-view_1mKvcn" data-c_e_id="wx_view_a58814f3">
+    <view class="weui-msg__text-area" data-c_e_id="wx_view_8ba08e07">
+        <text class="c-block weui-msg__title1" data-c_e_id="wx_text6a645d46">可用余额</text>
+        <text class="c-block wx-text_iEoJ5G" data-c_e_id="wx_text_1f41b8ba">￥{{money}}</text>
+    </view>
+    <view class="recharge">
+       <text>充值</text>
+       <view class="recharge_line1">
+        <view class="recharge_button1 {{now_price==6?'on':''}}" bindtap='select_price' data-price="6">￥6</view>
+        <view class="recharge_button2 {{now_price==19?'on':''}}"  bindtap='select_price' data-price="19">￥19</view>
+       </view>
+       <view class="recharge_line1">
+        <view class="recharge_button1 {{now_price==99?'on':''}}" bindtap='select_price' data-price="99">￥99</view>
+        <view class="recharge_button2 {{now_price==299?'on':''}}" bindtap='select_price' data-price="299">￥299</view>
+       </view>
+    </view>
+    <view class="weui-msg__opr-area" data-c_e_id="wx_view_0a66aedb">
+        <button class="weui-btn_primary" data-c_e_id="wx_button_a9d6c57e" hover-class="button-hover" bindtap='pay_money' size="default" >
+            充值
+        </button>
+        
+        <button class="weui-btn_default" data-c_e_id="wx_button_52764db0" hover-class="button-hover" size="default" type="default" bindtap='go_moneyout'>
+            提现
+        </button>
+        <view style='margin-top:5px;'>
+        <view  style="font-size:14px;color:#ff9933; text-align:center; float:left" bindtap='show_outlist'>提现明细</view>
+        <view  style="font-size:14px;color:#ff9933;text-align:center;float:right" bindtap='show_list'>余额明细</view>
+        </view>
+    </view>
+    
+</view>

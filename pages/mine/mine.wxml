@@ -1,0 +1,86 @@
+<view class="container1" >
+   <view class="userinfo_view">
+       <view class="detail_view">
+            <view class="row1">
+            <button class="head_img" mode="scaleToFill" plain='true' open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="background-image:url({{userinfo.avatarUrl}}); background-size:100%"></button>
+            <view class="name_view" >
+                  {{userinfo.nickname==null?'点我登录':userinfo.nickname}}
+            </view>   
+           <!--<view class="edit_view" bindtap='editMine'>
+                编辑>
+           </view>-->
+            </view>
+            
+       </view>
+   </view>
+   <view class="num_view">
+      <view class="num_child" bindtap='applyFav' wx:if="{{userinfo.is_anchor == 0}}">
+          <text class="number1">{{userinfo.has_fav}}\n</text>
+          <text class="txt1">收藏活动</text>
+      </view>
+      <view class="num_child" bindtap='applyActivity' wx:if="{{userinfo.is_anchor == 1}}">
+          <text class="number1">{{userinfo.has_active}}\n</text>
+          <text class="txt1">My Live</text>
+      </view>
+      <view class="num_child" bindtap='myList' >
+          <text class="number2">{{userinfo.in_active}}\n</text>
+          <text class="txt2">{{userinfo.is_anchor == 0 ? "我的参与":"My participation"}}</text>
+      </view>
+      <view class="num_child" bindtap='myAccount'>
+          <text class="number3">{{userinfo.money}}\n</text>
+          <text class="txt3">{{userinfo.is_anchor == 0?"余额":"balance"}}</text>
+      </view>
+   </view>
+   <view class="other_view">
+      <view class="share_view" wx:if="{{userinfo.is_anchor == 0}}" bindtap='applyHost' >
+      <image  mode="scaleToFill" src="../Resources/mic.png" />
+      To be a Speaker
+      </view>
+      <view class="share_view" wx:if="{{userinfo.is_anchor == 1}}" bindtap='addActivity'>
+      <image  mode="scaleToFill" src="../../images/session.png" />
+      Initial a Session
+      </view>
+
+
+
+
+      <view class="bt_list" bindtap='myList'>
+         <image class="bt_list_icon" mode="aspectFit" src="../../images/mine5.png" />
+    <view class="bt_list_tr">
+        <text>我的参与</text>
+        <view class="jiantou">❯</view>
+    </view>
+      </view>
+      
+      <view class="bt_list" bindtap='myAccount'>
+         <image class="bt_list_icon" mode="aspectFit" src="../../images/mine2.png" />
+    <view class="bt_list_tr">
+        <text>我的账户</text>
+        <view class="jiantou">❯</view>
+    </view>
+      </view>
+     
+      
+      <view class="bt_list" bindtap='Help'>
+         <image class="bt_list_icon" mode="aspectFit" src="../../images/mine3.png" />
+    <view class="bt_list_tr">
+        <text>帮助中心</text>
+        <view class="jiantou">❯</view>
+    </view>
+      </view>
+     <button class="bt_list1" open-type="share">
+         <image class="bt_list_icon1" mode="aspectFit" src="../../images/mine4.png" />
+    <view class="bt_list_tr1" >
+        <text>分享小程序</text>
+        <view class="jiantou1">❯</view>
+    </view>
+      </button>
+
+
+   </view>
+   
+
+
+
+
+</view>

@@ -1,0 +1,17 @@
+<!--pages/help/help.wxml-->
+<view class="table">
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <view class="tr " wx:if="{{index % 2 == 0}}" bindtap='go_web' id="{{item.id}}">
+      <view class="td">{{item.title}}</view>
+      <view class="td1" >
+       ❯
+      </view> 
+    </view>
+    <view class="tr bg-g" wx:else bindtap='go_web' id="{{item.id}}">
+      <view class="td">{{item.title}}</view>
+      <view class="td1" >
+      ❯
+      </view> 
+    </view>
+  </block>
+</view>

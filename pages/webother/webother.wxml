@@ -1,0 +1,2 @@
+<!--pages/webother/webother.wxml-->
+<web-view src="{{urls}}"></web-view>

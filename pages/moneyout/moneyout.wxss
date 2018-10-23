@@ -1,0 +1,48 @@
+page{
+  background-color: #eeeeee;
+}
+.homepage{
+  background-color: #fff;
+  height: 325rpx;
+  width: 94%;
+  margin-left: 3%; 
+  margin-top: 24rpx;
+  padding-top: 30rpx;
+}
+.homepage_text{
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Microsoft Yahei";
+  margin-left:50rpx; 
+  margin-right:50rpx;
+}
+.homepage_input{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  margin-top: 10px;
+  margin-left:45rpx; 
+  margin-right:45rpx;
+  font-weight: 700;
+  font-size: 25px;
+  border-bottom-color: #eeeeee;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.homepage_input>input{
+  margin-left: 25rpx;
+  width: 100%;
+  height: 90%;
+}
+.homepage_button{
+  margin-top: 20px;
+  height:95rpx;
+  width: 100%;
+  display: flex;
+}
+.homepage_button>button{
+  color: #fff;
+  font-weight: 600;
+  width: 88%;
+  background-color: #ff9933;
+}

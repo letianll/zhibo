@@ -1,0 +1,51 @@
+<view class="swiper-tab"> 
+   <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">待完成</view> 
+   <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已完成</view> 
+  </view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:1200rpx;" bindchange="bindChange"> 
+  <swiper-item>
+  <block wx:for="{{listData}}" wx:key="{{name}}">
+  <view class="table">
+     <view class="title1">
+        活动信息
+     </view> 
+     <view class="neirong">
+        <view style='margin-left:20px;margin-right:20px;text-align:center;'>
+          <text>{{item.name}}\n
+          时间：{{item.start_time}}
+          </text>
+        </view>
+     </view>
+     <view class="title2">
+      <view class="title2_ZT">
+        活动状态
+      </view>
+      <view class="title2_CZ">
+        活动操作
+      </view>
+     </view>
+     <view class="zhuangtai">
+        <view class="title2_ZT_1">
+        {{item.status_name}}
+      </view>
+      <view class="title2_CZ_2">
+        <button bindtap='cancel_active' id="{{item.id}}" wx:if="{{item.status == 0||item.status==1}}">取消</button>
+      <button bindtap='start_active' id="{{item.id}}" wx:elif="{{item.status==2}}">开始</button>
+      <button bindtap='go_active' id="{{item.id}}" wx:else>进入</button>
+      </view>
+     </view>
+   </view>
+</block>
+
+  </swiper-item>
+  <swiper-item> 
+  <scroll-view  lower-threshold="50" scroll-y="True" style="overflow-x: hidden; overflow-y: auto; height:1200rpx;" upper-threshold="50" >
+     <import src="../template/active_tmp.wxml"/>
+      <block wx:for="{{comlistData}}" wx:key="{{index}}" wx:for-item="item"> 
+      <template is="active_list" data="{{...item}}"></template>
+      </block>         
+     
+   </scroll-view>
+  </swiper-item>
+  </swiper>
+

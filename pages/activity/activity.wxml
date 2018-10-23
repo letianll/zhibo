@@ -1,0 +1,76 @@
+<form bindsubmit="formSubmit" report-submit="true">
+<view class="Act_homepage">
+ 
+  <picker bindchange="bindActiveChange" value="{{active_index}}" name="gid" range="{{active_group}}" range-key="group_name">
+  <view class="input_txt">classification</view>
+  <view class="picker" >
+    {{active_group[active_index].group_name}}
+  </view>
+  </picker>
+  <picker bindchange="bindCityChange" name="cityid" value="{{city_index}}" range="{{city_group}}" range-key="name"> 
+      <view class="input_txt">city</view> 
+      <view class="picker">  
+        {{city_group[city_index].name}}  
+      </view>  
+  </picker>
+  <picker bindchange="bindShopChange" name="sid" value="{{shop_index}}" range="{{shop_group}}" range-key="group_name">  
+      <view class="input_txt">shop</view> 
+      <view class="picker">  
+        {{shop_group[shop_index].group_name}}  
+      </view>  
+  </picker>
+
+
+  <view class="input_txt">Session Topic</view> 
+  <view class="money">
+    <input placeholder="Fill in the theme of the activity you want to share" name="name"></input>
+  </view>
+
+  <view class="input_txt">Session Introduction</view> 
+  <view class="money" style="height:200rpx;">
+   <textarea placeholder="Please tell us what you want to share" name="detail"/>  
+  </view>
+</view>
+
+  <view class="input_txt">Collage Number</view>
+  <picker bindchange="bindNumChange" value="{{n_index}}" name="totleneed_online_member" range="{{Num}}">  
+      <view class="picker">  
+       {{Num[n_index]}}  
+      </view>  
+  </picker>
+
+
+  <view class="input_txt">Time</view>
+  <view class="datetime"> 
+    <picker style='height:100%;width:66%; margin-left:2%;' name="start_date" mode="date" value="{{date}}" start="{{date}}" end="" bindchange="bindDateChange">
+      <view class="picker" style="text-align:center">  
+          {{date}}
+      </view>    
+    </picker>  
+    <picker style='height:100%;width:28%' name="start_time" mode="time" value="{{time}}" start="{{time}}" end="23:00" bindchange="bindTimeChange">
+      <view class="picker" style="border-left:1px solid #aaaaaa">  
+          {{time}}
+      </view> 
+    </picker>
+   
+</view>
+
+<view class="input_txt">Price of Offline Audience</view>
+<view class="money">
+    <input placeholder="Price" type='number' name="offline_price"></input><text style="color:red" >RMB/Person</text>
+    </view>
+
+
+<view class="deep_button">
+  <button  formType="submit">Confrim and apply</button>
+</view>
+
+
+<view class='Act_bottom'>
+  <text>
+   Please wait for review after submission, 8 Billion Coffee's angel will contact you shortly.
+   </text>
+</view>
+
+
+</form>

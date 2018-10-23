@@ -1,0 +1,27 @@
+<view class="swiper-tab"> 
+   <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">待完成</view> 
+   <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已完成</view> 
+  </view> 
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:1200rpx;" bindchange="bindChange"> 
+  <swiper-item> 
+  <scroll-view  lower-threshold="50" scroll-y="True" style="overflow-x: hidden; overflow-y: auto; height:1200rpx;" upper-threshold="50" bindscrolltolower="loadMore">
+     <import src="../template/active_tmp.wxml"/>
+      <block wx:for="{{index_info}}" wx:key="{{index}}" wx:for-item="item"> 
+      <template is="active_list" data="{{...item}}"></template>
+      </block>         
+     
+   </scroll-view>
+  </swiper-item>
+  <swiper-item> 
+    <scroll-view  lower-threshold="50" scroll-y="True" style="overflow-x: hidden; overflow-y: auto; height:1200rpx;" upper-threshold="50" bindscrolltolower="loadcomMore">
+     <import src="../template/active_tmp.wxml"/>
+      <block wx:for="{{com_info}}" wx:key="{{index}}" wx:for-item="item"> 
+      <template is="active_list" data="{{...item}}"></template>
+      </block>         
+     
+   </scroll-view>
+  </swiper-item>
+</swiper>
+
+
+

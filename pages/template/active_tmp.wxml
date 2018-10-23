@@ -1,0 +1,18 @@
+<template name="active_list">
+<navigator url="/pages/index_detail/index_detail?id={{id}}">
+    <view class="active_view" >
+              <view class="active_img" style='background-image:url({{img}});'>
+                 <button style="background-color:{{status<4?'#ff9933;':'#666666;'}}">{{status_name}}</button>
+                 
+              </view>
+              <view class="title_view">{{name}}</view>
+              <view class="desc_view">{{detail}}</view> 
+              <!--<view class="other_view">
+              <view class="type_view">{{g_name}}</view>
+              <view class="price_view">
+              线下参加价格:<text>{{offline_price}}</text>元，线上参加价格<text>{{online_price}}</text>元
+              </view>
+              </view>-->
+    </view>
+</navigator>
+</template>

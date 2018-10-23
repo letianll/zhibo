@@ -1,0 +1,5 @@
+<view class='homepage'>
+ <view class='homepage_text'>提现金额</view>
+ <view class='homepage_input'>￥<input type='number' bindinput="userTextInput"></input></view>
+ <view class='homepage_button'><button bindtap='moneyout'>下一步</button></view>
+</view>

@@ -1,0 +1,40 @@
+<view class="title_image">
+  <image src="{{detail_data.headimg}}" mode="aspectFit"></image>
+</view>
+<scroll-view>
+<view class="fenge">
+<view class="line"></view>
+<view class="txt">他是谁？</view>
+<view class="line"></view>
+</view>
+<view class='home_page_text'>
+        <text class='home_page_text1 on' style="font-size:25rpx;" >分享者|speaker</text>
+        <text class='home_page_text1' style="color: #666666;">{{detail_data.name}}</text>
+        <view class='home_page_text3' bindtap="guanzhu">
+          <view class='home_page_view' style="color: #666666;">
+            <image src="/images/{{is_gz==0?'sc':'sc1'}}.png" ></image>
+            <text>{{gz_num}}</text>
+          </view>
+          <view class='home_page_view' style=' width: 110rpx; color:#ff9933'>
+            <text>{{is_gz==0?'关注我':'已关注'}}</text>
+          </view>
+        </view>
+        <!--<text class='home_page_text1 on' >国籍</text>
+        <text class='home_page_text1' style="color: #666666;">{{detail_data.country}}</text>-->
+</view>
+<view class="text_abstract">
+         <import src="../../wxParse/wxParse.wxml"/>
+         <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+ </view>
+<view class="fenge">
+<view class="line"></view>
+<view class="txt">他的活动</view>
+<view class="line"></view>
+</view>
+
+<import src="../template/active_tmp.wxml"/>
+      <block wx:for="{{index_info}}" wx:key="{{index}}" wx:for-item="item"> 
+      <template is="active_list" data="{{...item}}"></template>
+      </block>   
+
+</scroll-view>

@@ -1,0 +1,55 @@
+<view class="container" >
+  <view class="swiper-tab"> 
+   <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部主播</view> 
+   <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">我的关注</view> 
+  </view> 
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:600px;" bindchange="bindChange"> 
+  <swiper-item> 
+    <scroll-view scroll-y="true" class="sr_view" style="height: 100%;" >
+      <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="45"/><text>刷新中...</text></view>
+      <view wx:else  style="display:none" ><text></text></view>
+      <block wx:for="{{index_info}}" wx:key="{{index}}"> 
+  <view class="anchor_view" catchtap='go_anchor' id='{{item.id}}'>
+  <image class="head_img" src="{{item.headimg}}" mode="aspectFit"></image>
+  <view class="anchor_txt"> 
+  <!--<view>
+  
+  <image src="/images/huatong.png"></image>
+  <text style="color:#ff9933;font-size:14px;">{{item.active_count}}</text>
+  <image src="/images/sc.png"></image>
+  <text style="color:#ff9933;font-size:14px;">{{item.care_count}}</text>
+  <image src="/images/liulan.png"></image>
+  <text style="color:#ff9933;font-size:14px;">{{item.sc_count}}</text>
+  </view> -->
+  </view> 
+  </view>
+   </block>         
+ </scroll-view>
+  </swiper-item> 
+  <swiper-item> 
+   <scroll-view scroll-y="true" class="sr_view" style="height: 100%;" bindscrolltolower="loadMoreaochor">
+      <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="45"/><text>刷新中...</text></view>
+      <view wx:else  style="display:none" ><text></text></view>
+      <block wx:for="{{care_info}}" wx:key="{{index}}"> 
+  <view class="anchor_view" catchtap='go_anchor' id='{{item.id}}'>
+  <image class="head_img" src="{{item.headimg}}" mode="aspectFit"></image>
+  <view class="anchor_txt"> 
+  <!--<view >
+  
+  <image src="/images/huatong.png"></image>
+  <text style="color:#ff9933;font-size:14px;">{{item.active_count}}</text>
+  <image src="/images/sc.png"></image>
+  <text style="color:#ff9933;font-size:14px;">{{item.care_count}}</text>
+  <image src="/images/liulan.png"></image>
+  <text style="color:#ff9933;font-size:14px;">{{item.sc_count}}</text>
+  </view>-->
+  </view>
+  </view>
+   </block>         
+ </scroll-view>
+  </swiper-item> 
+</swiper> 
+</view>

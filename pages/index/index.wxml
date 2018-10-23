@@ -1,0 +1,71 @@
+<!--index.wxml-->
+
+ <swiper class="myswiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+   <block wx:for="{{movies}}" wx:key="{{index}}">
+   <navigator url="{{item.urls}}">
+    <swiper-item>  
+     <image src="{{item.photo}}" class="slide-image" mode="aspectFill"/>
+    </swiper-item>  
+    </navigator> 
+   </block>  
+  </swiper>
+<view class="container" >
+ 
+ <view class="swiper-tab"> 
+   <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+   ■ 首页</view>  
+   <!--<view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">■ 分类</view>-->
+   <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">■ 收藏</view>
+   <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">■ 参与</view> 
+  </view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" style="height:500px;" > 
+  <swiper-item  style="height: 100%;">
+  <scroll-view scroll-y="true" class="sr_view" style="height: 100%;" bindscrolltolower="get_index_more">
+      <import src="../template/active_tmp.wxml"/>
+      <block wx:for="{{index_info}}" wx:key="{{index}}" wx:for-item="item"> 
+      <template is="active_list" data="{{...item}}"></template>
+      </block>         
+ </scroll-view>
+
+  </swiper-item> 
+   <!-- <swiper-item>
+  <view class="cat_list">
+  <block wx:for="{{catlist}}" wx:key="{{index}}"> 
+    <view class="cat_item" bindtap='go_search' id="{{item.id}}">
+    <view class="cat_num">{{item.has_num}}</view>
+    <view style="background-image:url({{item.img_url}})" class="cat_img" >
+    </view>
+    {{item.group_name}}
+    </view>
+  </block>
+  </view>
+  </swiper-item> -->
+
+   
+
+   <swiper-item  style="height: 100%;">
+  <scroll-view scroll-y="true" class="sr_view" style="height: 100%;" bindscrolltolower="get_sc_more">
+      <import src="../template/active_tmp.wxml"/>
+      <block wx:for="{{sc_info}}" wx:key="{{index}}" wx:for-item="item"> 
+      <template is="active_list" data="{{...item}}"></template>
+      </block>         
+       
+ </scroll-view>
+
+  </swiper-item>
+
+
+
+
+  <swiper-item  style="height: 100%;">
+  <scroll-view scroll-y="true" class="sr_view" style="height: 100%;" bindscrolltolower="get_buy_more">
+      <import src="../template/active_tmp.wxml"/>
+      <block wx:for="{{buy_info}}" wx:key="{{index}}" wx:for-item="item"> 
+      <template is="active_list" data="{{...item}}"></template>
+      </block>   
+     
+ </scroll-view>
+
+  </swiper-item>
+ </swiper>
+</view>
